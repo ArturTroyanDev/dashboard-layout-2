@@ -1,0 +1,9 @@
+doctype html
+html
+  head
+    title= title
+    link(rel="stylesheet" href="/src/styles/main.css")
+    script(src="/src/scripts/main.js", type="module", defer) 
+  body
+    include ../components/header.pug
+    block content

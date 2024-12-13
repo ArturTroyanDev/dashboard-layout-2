@@ -1,0 +1,28 @@
+{
+   "users": [
+    
+    {
+      "id": 1,
+      "name": "Leanne Graham",
+      "username": "Bret",
+      "email": "Hr6Df@example.com",
+      "address": {
+         "street": "Kulas Light",         
+         "suite": "Apt. 556",
+         "city": "Gwenborough",
+         "zipcode": "92998-3874"
+        }},
+    {
+      "id": 2,
+      "name": "Jone Grisha",
+      "username": "Bret",
+      "email": "Hr6Df@example.com",
+      "address": {
+         "street": "Kulas Light",         
+         "suite": "Apt. 556",
+         "city": "Gwenborough",
+         "zipcode": "92998-3874"
+        }}
+    
+    ] 
+}
