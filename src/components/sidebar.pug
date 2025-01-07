@@ -1,13 +1,14 @@
-div 
-  div.sidebar
-    div.block
-      div.header
-      img(src='')
-      h1.title Dasboard 
+.sidebar
+  .block
+    .header
+      //- img(src='/src/images/logo.png')
+      h3.title Dasboard 
       small.version v.01
-        nav 
-          ul(id="navigation")
-            each item in ['Index', 'Product', 'Customers', 'Income', 'Promote', 'Help']
-              li
-                a(href="/" + item)=item
+      
+    nav.nav
+      ul.list(id="navigation")
+        each item in ['Index', 'Product', 'Customers', 'Income', 'Promote', 'Help']
+          li.item 
+            //- img
+            a.link(href="/" + item)=item
         

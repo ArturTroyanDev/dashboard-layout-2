@@ -3,7 +3,10 @@ html
   head
     title= title
     link(rel="stylesheet" href="/src/styles/main.css")
-    script(src="/src/scripts/main.js", type="module", defer) 
+    script(src="/src/scripts/main.js", type="module", defer)
   body
-    include ../components/sidebar.pug
-    block content
+    .container 
+      .dashboard  
+        include ../components/sidebar.pug
+        block content
+
