@@ -1,0 +1,54 @@
+extends ../../layout/main.pug
+
+
+block content
+  main.dashboard__main.main-content
+    
+
+    section.main-content__section.section
+      .main-content__container
+        .section__search-block.search-block
+          .search-block__titles-container
+            h2.section__title All Customers
+            p.section__subtitle Active Members
+          .section__input-wrapper
+            .section__input-container
+              img.section__search-icon(src="/images/magnifying-glass.svg" alt="")
+              input.section__input(type="text" placeholder="Search")
+        
+        
+        
+        table.table
+          theader.table__table-header.table-header
+              tr.table-header__row
+                th.table-header__cell Customer Name
+                th.table-header__cell Company
+                th.table-header__cell Phone Number
+                th.table-header__cell Email
+                th.table-header__cell Country
+                th.table-header__cell.table-header__cell_status Status       
+          tbody.table__table-body.table-body
+                each item in users
+                  tr.table-body__row
+                    td.table-body__group
+                      span.table-body__key Customer Name
+                      span.table-body__value=item.name
+                    td 
+                      span.table-body__key Company
+                      span.table-body__value=item.company
+                    td 
+                      span.table-body__key Phone Number
+                      span.table-body__value=item.phonenNumber
+                    td 
+                      span.table-body__key Email
+                      span.table-body__value=item.email
+                    td 
+                      span.table-body__key Country
+                      span.table-body__value=item.country
+                    td 
+                      span.table-body__key Status
+                      div
+                        span.table-body__value=item.status
+                        span.table-body__status=item.status
+
+                

@@ -137,9 +137,9 @@ body {
 
 }
 
-/* .img {
+.logo {
     padding-right: calc(5px + 3 * ((100vw - 1115px) / (1365 - 1115))); 
-} */
+}
 
 .title {
     padding-right: 4px;
@@ -171,11 +171,21 @@ body {
 }
 
 .item {
+    display: flex;
+    align-items: center;
+    flex: 1; 
     font-size: 14px;
+
+}
+
+.icon {
+    padding-right: 14px;
 }
 
 .link {
     color: #9197B3;
     line-height: 21px; 
-}
+    width: 100%;
+    padding-right: 20px;
 
+}

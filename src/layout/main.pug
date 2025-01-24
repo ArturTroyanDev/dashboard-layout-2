@@ -2,11 +2,14 @@ doctype html
 html
   head
     title= title
-    link(rel="stylesheet" href="/src/styles/main.css")
     script(src="/src/scripts/main.js", type="module", defer)
   body
     .container 
       .dashboard  
-        include ../components/sidebar.pug
-        block content
-
+      
+        include ../components/sidebar/sidebar.pug
+        main.dashboard__main.main-content
+          block content
+        block customStyles
+          link(rel="stylesheet" href="/src/styles/main.css")
+          link(rel="stylesheet" href="/src/styles/customers.css")
