@@ -9,7 +9,8 @@ html
       
         include ../components/sidebar/sidebar.pug
         main.dashboard__main.main-content
+          include ../components/header/header.pug
           block content
-        block customStyles
+          block customStyles
           link(rel="stylesheet" href="/src/styles/main.css")
           link(rel="stylesheet" href="/src/styles/customers.css")
