@@ -4,7 +4,7 @@
       "id": 0,
       "name": "Jane Cooper",
       "company": "Microsoft",
-      "phonenNumber": "(225) 555-0118",
+      "phoneNumber": "(225) 555-0118",
       "email": "jane@microsoft.com",
       "country": "United States",
       "status": "Active"

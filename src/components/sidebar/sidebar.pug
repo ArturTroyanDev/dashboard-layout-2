@@ -1,23 +1,30 @@
-- let items = ['Dashboard', 'Product', 'Customers', 'Income', 'Promote', 'Help']
+- let items = ['Product', 'Customers', 'Income', 'Promote', 'Help']
 - let imgsPath = "/src/assets/sidebar-icons/"
 - let imgsFormat = '.svg'
 
 
-.sidebar
-  .block
-    .header
-      img.logo(src="/src/assets/logo.svg" alt="logo")
-      h3.title Dashboard 
-      small.version v.01
+.dashboard__sidebar.sidebar#sidebar
+  .sidebar__block
+    .sidebar__header.header
+      a(href="/").header__container
+        img.header__img(src="/src/assets/logo.svg" alt="logo")
+        h3.header__title Dashboard 
+        small.header__version v.01
       
-    nav.nav
-      ul.list(id="navigation")
+    nav.sidebar__nav
+      ul.sidebar__list(id="navigation")
+        .sidebar__title-block
+            img.sidebar__icon(src="/src/assets/sidebar-icons/dashboard.svg" alt="dashboard")
+            label.sidebar__title Dashboard
         each item in items
-          li.item 
-            img.icon(src=imgsPath + item.toLowerCase() + imgsFormat alt=item)
-            //- img.img(src="/src/assets/sidebar-icons/dashboard.svg" alt="dashboard")
-            //- a.link(href="/" + item)=item
-            a.link(href="/customers/customers")=item
-            img.img(src="/src/assets/sidebar-arrows/gray-arrow-right.svg" alt="arrow")
+          button.sidebar__navigation-block
+            img.sidebar__icon(src=imgsPath + item.toLowerCase() + imgsFormat alt=item)
+            a.sidebar__link(href="/")=item
+            img.sidebar__arrow-img(src="/src/assets/sidebar-arrows/gray-arrow-right.svg" alt="arrow")
+    .sidebar__evano-block
+      img.sidebar__evano-img(src="/src/assets/evano.svg" alt="profile-picture")
+      .sidebar__evano-info
+        p.sidebar__employee-name Evano
+        p.sidebar__employee-position Project Manager
 
         
