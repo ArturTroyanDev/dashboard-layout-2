@@ -11,9 +11,6 @@ block content
             .section__input-container
               img.section__search-icon(src="/src/assets/magnifying-glass.svg")
               input.section__input(type="text" placeholder="Search")
-        
-        
-        
         table.section__table-body.table
           thead.table__table-header.table-header
             tr.table-header__row
@@ -44,164 +41,24 @@ block content
                 td.table-body__group.table-body__group_indicator
                   span.table-body__key Status
                   span.table-body__value
-                    span.table-body__indicator=item.status
-              tr.table-body__row
-                td.table-body__group
-                  span.table-body__key Customer Name
-                  span.table-body__value=item.name
-                td.table-body__group
-                  span.table-body__key Company
-                  span.table-body__value=item.company
-                td.table-body__group
-                  span.table-body__key Phone Number
-                  span.table-body__value=item.phoneNumber
-                td.table-body__group
-                  span.table-body__key Email
-                  span.table-body__value=item.email
-                td.table-body__group
-                  span.table-body__key Country
-                  span.table-body__value=item.country
-                td.table-body__group.table-body__group_indicator
-                  span.table-body__key Status
-                  div
-                  span.table-body__value
-                    span.table-body__indicator=item.status
-              tr.table-body__row
-                td.table-body__group
-                  span.table-body__key Customer Name
-                  span.table-body__value=item.name
-                td.table-body__group
-                  span.table-body__key Company
-                  span.table-body__value=item.company
-                td.table-body__group
-                  span.table-body__key Phone Number
-                  span.table-body__value=item.phoneNumber
-                td.table-body__group
-                  span.table-body__key Email
-                  span.table-body__value=item.email
-                td.table-body__group
-                  span.table-body__key Country
-                  span.table-body__value=item.country
-                td.table-body__group.table-body__group_indicator
-                  span.table-body__key Status
-                  div
-                  span.table-body__value
-                    span.table-body__indicator=item.status
-              tr.table-body__row
-                td.table-body__group
-                  span.table-body__key Customer Name
-                  span.table-body__value=item.name
-                td.table-body__group
-                  span.table-body__key Company
-                  span.table-body__value=item.company
-                td.table-body__group
-                  span.table-body__key Phone Number
-                  span.table-body__value=item.phoneNumber
-                td.table-body__group
-                  span.table-body__key Email
-                  span.table-body__value=item.email
-                td.table-body__group
-                  span.table-body__key Country
-                  span.table-body__value=item.country
-                td.table-body__group.table-body__group_indicator
-                  span.table-body__key Status
-                  div
-                  span.table-body__value
-                    span.table-body__indicator=item.status
-              tr.table-body__row
-                td.table-body__group
-                  span.table-body__key Customer Name
-                  span.table-body__value=item.name
-                td.table-body__group
-                  span.table-body__key Company
-                  span.table-body__value=item.company
-                td.table-body__group
-                  span.table-body__key Phone Number
-                  span.table-body__value=item.phoneNumber
-                td.table-body__group
-                  span.table-body__key Email
-                  span.table-body__value=item.email
-                td.table-body__group
-                  span.table-body__key Country
-                  span.table-body__value=item.country
-                td.table-body__group.table-body__group_indicator
-                  span.table-body__key Status
-                  div
-                  span.table-body__value
-                    span.table-body__indicator=item.status
-              tr.table-body__row
-                td.table-body__group
-                  span.table-body__key Customer Name
-                  span.table-body__value=item.name
-                td.table-body__group
-                  span.table-body__key Company
-                  span.table-body__value=item.company
-                td.table-body__group
-                  span.table-body__key Phone Number
-                  span.table-body__value=item.phoneNumber
-                td.table-body__group
-                  span.table-body__key Email
-                  span.table-body__value=item.email
-                td.table-body__group
-                  span.table-body__key Country
-                  span.table-body__value=item.country
-                td.table-body__group.table-body__group_indicator
-                  span.table-body__key Status
-                  div
-                  span.table-body__value
-                    span.table-body__indicator=item.status
-              tr.table-body__row
-                td.table-body__group
-                  span.table-body__key Customer Name
-                  span.table-body__value=item.name
-                td.table-body__group
-                  span.table-body__key Company
-                  span.table-body__value=item.company
-                td.table-body__group
-                  span.table-body__key Phone Number
-                  span.table-body__value=item.phoneNumber
-                td.table-body__group
-                  span.table-body__key Email
-                  span.table-body__value=item.email
-                td.table-body__group
-                  span.table-body__key Country
-                  span.table-body__value=item.country
-                td.table-body__group.table-body__group_indicator
-                  span.table-body__key Status
-                  div
-                  span.table-body__value
-                    span.table-body__indicator=item.status
-              tr.table-body__row
-                td.table-body__group
-                  span.table-body__key Customer Name
-                  span.table-body__value=item.name
-                td.table-body__group
-                  span.table-body__key Company
-                  span.table-body__value=item.company
-                td.table-body__group
-                  span.table-body__key Phone Number
-                  span.table-body__value=item.phoneNumber
-                td.table-body__group
-                  span.table-body__key Email
-                  span.table-body__value=item.email
-                td.table-body__group
-                  span.table-body__key Country
-                  span.table-body__value=item.country
-                td.table-body__group.table-body__group_indicator
-                  span.table-body__key Status
-                  div
-                  span.table-body__value
-                    span.table-body__indicator=item.status
+                    button.table-body__indicator=item.status
         .section__pagination.pagination
           span.pagination__info Showing data 1 to 8 of 256K entries
-          nav.pagination__controls
-            a.pagination__page(href="#") &lt;
-                                        
-            a.pagination__page.pagination__page-active(href="#") 1
-            a.pagination__page(href="#") 2
-            a.pagination__page(href="#") 3
-            a.pagination__page(href="#") 4
-            a.pagination__page.pagination__page-more(href="#") ...
-            a.pagination__page(href="#") 40
-            a.pagination__page(href="#") &gt;
+          
+
+          
+          nav.pagination-container
+            button.pagination-button#prev-button(title="Previous page" aria-label="Previous page") &lt;
+            div#pagination-numbers
+            button.pagination-button#next-button(title="Next page" aria-label="Next page") &gt;
+
+
+            //- button.pagination__page(href="#") &lt;              
+            //- a.pagination__page.pagination__page-active(href="#") 1
+            //- a.pagination__page(href="#") 2
+            //- a.pagination__page(href="#") 3
+            //- a.pagination__page(href="#") 4
+            //- a.pagination__page.pagination__page-more(href="#") ...
+            //- a.pagination__page(href="#") 40
+            //- button.pagination__page(href="#") &gt;
 
