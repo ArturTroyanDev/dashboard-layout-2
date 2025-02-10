@@ -387,6 +387,10 @@ body {
     padding-bottom: 12.5px;
 }
 
+.hidden {
+    display: none;
+}
+
 .table-header__cell, .table-body__group {
     border-bottom: 1px solid rgb(238, 238, 238);
     white-space: nowrap;
@@ -487,6 +491,7 @@ body {
     background: none;
     border: none;
 } */
+
 .pagination-container {
     display: flex;
     align-items: center;
@@ -651,6 +656,9 @@ body {
         text-align: initial;
     }
 
+    .hidden {
+        display: none!important;
+    }
 
     .table-header {
         position: absolute;

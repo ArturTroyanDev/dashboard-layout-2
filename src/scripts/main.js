@@ -26,11 +26,13 @@ function toggleIndicator(element) {
 })
 
 
+
 const paginationNumbers = document.getElementById("pagination-numbers");
 const paginatedList = document.getElementById("paginated-list");
 const listItems = paginatedList.querySelectorAll(".table-body__row");
 const nextButton = document.getElementById("next-button");
 const prevButton = document.getElementById("prev-button");
+const entriesQuantity = document.getElementById("entries-quantity"); 
 
 const paginationLimit = 8;
 const pageCount = Math.ceil(listItems.length / paginationLimit);
@@ -44,24 +46,22 @@ const appendPageNumber = (index) => {
     pageNumber.setAttribute("page-index", index);
     pageNumber.setAttribute("aria-label", "Page " + index);
     paginationNumbers.appendChild(pageNumber);
-  };
-  const getPaginationNumbers = () => {
-    for (let i = 1; i <= pageCount; i++) {
-      appendPageNumber(i);
-    }
 };
-
-window.addEventListener("load", () => {
-    getPaginationNumbers();
-});
+const getPaginationNumbers = () => {
+  for (let i = 1; i <= pageCount; i++) {
+    appendPageNumber(i);
+  }
+};
 
 const setCurrentPage = (pageNum) => {
     currentPage = pageNum;
 
     handleActivePageNumber();
+    handlePageButtonsStatus();
 
     const prevRange = (pageNum - 1) * paginationLimit;
     const currRange = pageNum * paginationLimit;
+
     listItems.forEach((item, index) => {
       item.classList.add("hidden");
       if (index >= prevRange && index < currRange) {
@@ -75,6 +75,14 @@ const setCurrentPage = (pageNum) => {
 window.addEventListener("load", () => {
     getPaginationNumbers();
     setCurrentPage(1);
+
+    prevButton.addEventListener("click", () => {
+      setCurrentPage(currentPage - 1);
+    });
+    nextButton.addEventListener("click", () => {
+      setCurrentPage(currentPage + 1);
+    });
+    
     document.querySelectorAll(".pagination-number").forEach((button) => {
       const pageIndex = Number(button.getAttribute("page-index"));
       if (pageIndex) {
@@ -96,3 +104,34 @@ window.addEventListener("load", () => {
       }
     });
   };
+
+  const disableButton = (button) => {
+    button.classList.add("disabled");
+    button.setAttribute("disabled", true);
+  };
+  const enableButton = (button) => {
+    button.classList.remove("disabled");
+    button.removeAttribute("disabled");
+  };
+  const handlePageButtonsStatus = () => {
+    if (currentPage === 1) {
+      disableButton(prevButton);
+    } else {
+      enableButton(prevButton);
+    }
+    if (pageCount === currentPage) {
+      disableButton(nextButton);
+    } else {
+      enableButton(nextButton);
+    }
+  };
+
+
+let entries;
+
+fetch("/src/data/main.json")
+  .then(response => response.json())
+  .then(json => {
+    entriesQuantity.innerHTML = "Showing data 1 to 8 of " + json.users.length + " entries";
+})
+//  256K entries
