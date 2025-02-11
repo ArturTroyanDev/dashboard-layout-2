@@ -34,6 +34,30 @@ const nextButton = document.getElementById("next-button");
 const prevButton = document.getElementById("prev-button");
 const entriesQuantity = document.getElementById("entries-quantity"); 
 
+// let n = 0
+// while (n < listItems.length) {
+//   n++
+//   if (n)
+// }
+
+// let displayedItems = []
+
+// const getDisplayedItems = () => {
+//   listItems.forEach((item, index) => {
+//     if (!item.classList.contains("hidden")) {
+//       displayedItems.push(index)
+//     }
+//   });
+//   console.log(displayedItems)
+
+  
+// }
+// const emptyArray = () => {
+//   if (displayedItems.length > 0) {
+//     displayedItems = []
+//   }
+// }
+
 const paginationLimit = 8;
 const pageCount = Math.ceil(listItems.length / paginationLimit);
 let currentPage;
@@ -78,9 +102,14 @@ window.addEventListener("load", () => {
 
     prevButton.addEventListener("click", () => {
       setCurrentPage(currentPage - 1);
+      // getDisplayedItems()
+      // emptyArray()
+
     });
     nextButton.addEventListener("click", () => {
       setCurrentPage(currentPage + 1);
+      // getDisplayedItems()
+      // emptyArray()
     });
     
     document.querySelectorAll(".pagination-number").forEach((button) => {
@@ -128,10 +157,12 @@ window.addEventListener("load", () => {
 
 
 let entries;
+// let entries;
+// let entries;
 
 fetch("/src/data/main.json")
   .then(response => response.json())
   .then(json => {
     entriesQuantity.innerHTML = "Showing data 1 to 8 of " + json.users.length + " entries";
 })
-//  256K entries
+
